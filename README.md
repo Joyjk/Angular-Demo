@@ -1,34 +1,34 @@
 # Commands
 npm install -g @angular/cli <br />
-npm start__
-npm install -g@angular/cli@10.0.0
-
-netstat -a -o -n
+npm start<br />
+npm install -g@angular/cli@10.0.0<br />
+<br /><br />
+netstat -a -o -n<br />
 
 ---------Generate component----------------------------
-ng generate component component_name_
-ng g c component_name
-ng g c user-data --inline-style
-ng generate component student-list --inline-template
-ng generate component student-list --inline-style --inline-template
+ng generate component component_name<br />
+ng g c component_name<br />
+ng g c user-data --inline-style<br />
+ng generate component student-list --inline-template<br />
+ng generate component student-list --inline-style --inline-template<br />
 
 ---------Generate Module---------------------------------
-ng g m module_name
+ng g m module_name<br />
 
 ---------Generate component inside Module----------------
-ng g c module_name/compunentName
+ng g c module_name/compunentName<br />
 
 ---------Generate Class ---------------------------------
-ng generate class class_name
+ng generate class class_name<br />
 
 ---------Generate interface -----------------------------
-ng g interface interface_name
+ng g interface interface_name<br />
 
 ---------Add Bootstrap----------------------------------
-ng add @ng-bootstrap/ng-bootstrap
+ng add @ng-bootstrap/ng-bootstrap<br />
 
 ---------Add Material UI--------------------------------
-ng add @angular/material
+ng add @angular/material<br />
 
 
 
