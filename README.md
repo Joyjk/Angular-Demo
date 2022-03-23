@@ -1,3 +1,37 @@
+# Commands
+npm install -g @angular/cli
+npm start
+npm install -g@angular/cli@10.0.0
+
+netstat -a -o -n
+
+---------Generate component----------------------------
+ng generate component component_name
+ng g c component_name
+ng g c user-data --inline-style
+ng generate component student-list --inline-template
+ng generate component student-list --inline-style --inline-template
+
+---------Generate Module---------------------------------
+ng g m module_name
+
+---------Generate component inside Module----------------
+ng g c module_name/compunentName
+
+---------Generate Class ---------------------------------
+ng generate class class_name
+
+---------Generate interface -----------------------------
+ng g interface interface_name
+
+---------Add Bootstrap----------------------------------
+ng add @ng-bootstrap/ng-bootstrap
+
+---------Add Material UI--------------------------------
+ng add @angular/material
+
+
+
 # Blog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
