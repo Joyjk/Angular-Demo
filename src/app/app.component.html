@@ -4,6 +4,14 @@
 <app-login></app-login>
 
 <br>
-<button (click)="getName('JK')">Click </button>
+<button (click)="getName('JK',232,'str abcd')">Click </button>
+<input type="text" #box (keyup)="getData(box.value)" name="" id="" placeholder="Keyup">
+<br>
+<input type="text" #box1 (keydown)="getData(box1.value)" name="" id="" placeholder="keydown">
+<br>
+<!-- blur - -> when focus out  -->
+<input type="text" #box2 (blur)="getData(box2.value)" name="" id="" placeholder="blur">
+<br>
+<button >Btn</button>
 
 <router-outlet></router-outlet>

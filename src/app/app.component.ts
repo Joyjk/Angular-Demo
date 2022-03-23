@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blog';
-  getName(name:any)
-  {
-    alert("Function "+name)
+  getName(name: any, num: Number, text: string) {
+    alert("Function " + name + " " + num + " " + text)
   }
+  getData(val:any){
+    console.log(val)
+  }
+
 }
