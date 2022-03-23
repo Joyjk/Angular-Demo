@@ -1,6 +1,6 @@
 # Commands
-npm install -g @angular/cli_
-npm start_
+npm install -g @angular/cli <br />
+npm start__
 npm install -g@angular/cli@10.0.0
 
 netstat -a -o -n
