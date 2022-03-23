@@ -1,7 +1,11 @@
+
+
 <app-user-list></app-user-list>
 <app-user-data></app-user-data>
 <app-student-list></app-student-list>
 <app-login></app-login>
+
+<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
 
 <br>
 <button (click)="getName('JK',232,'str abcd')">Click </button>
@@ -10,8 +14,94 @@
 <input type="text" #box1 (keydown)="getData(box1.value)" name="" id="" placeholder="keydown">
 <br>
 <!-- blur - -> when focus out  -->
-<input type="text" #box2 (blur)="getData(box2.value)" name="" id="" placeholder="blur">
+<input type="text" #box2 (blur)="getData(box2.value)" name="" id="" [disabled]="disable" placeholder="blur">
 <br>
-<button >Btn</button>
+
+<input type="text" #box3 (input)="getData(box3.value)" name="" id="" disabled="{{disable}}" placeholder="input">
+<br>
+
+<h1 #mos (mouseover)="getData('over')" *ngIf="showData else elseBlock">Mouse over</h1>
+<h1 #mos (mouseleave)="getData('leave')" *ngIf="showData2=='abc' else elseBlock">Mouse leave</h1>
+
+<ng-template #elseBlock>
+    <h1>This is else block</h1>
+</ng-template>
+
+<br>
+<br>
+<input type="text" #box4  placeholder="Enter any" name="name">
+<br>
+<p>Box val: {{displayValue}}</p>
+<button (click)="getInputValue(box4.value)">Btn</button>
+<p>Box4 placeholder: {{displayValue}}</p>
+<button (click)="getInputValue(box4.placeholder)">Btn</button>
+
+<br><br>
+
+<h5>{{count}}</h5>
+<button (click)="counter('add')">+</button>
+<button (click)="counter('min')">-</button>
+
+<ng-template ngIf="color==='red'">
+    <h1>Red color</h1>
+</ng-template>
+<ng-template ngIf="color==='green'">
+    <h1>Green color</h1>
+</ng-template>
+<ng-template ngIf="color==='blue'">
+    <h1>Blue color</h1>
+</ng-template>
+<br>
+<p>swith case</p>
+<div [ngSwitch]="color">
+    <h2 *ngSwitchCase="'red'">Red</h2>
+    <h2 *ngSwitchCase="'green'">green</h2>
+    <h2 *ngSwitchCase="'blue'">Blue</h2>
+    <h2 *ngSwitchDefault>Default</h2>
+</div>
+<div>
+     <h3 *ngFor="let item of userArr">{{item}}</h3>
+        <hr>
+    
+</div>
+<div>
+    <ul *ngFor="let item of userDetails">
+        <li>{{item.phone}}</li>
+    
+    <ul *ngFor="let acc of item.accounts">
+        <li>{{acc}}</li>
+    </ul>
+</ul>
+</div>
+<hr>
+<h1 [style.color]="color" [style.backgroundColor]="bgc">Dynamic Color</h1>
+<button (click)="updateColor()">change color</button>
+
+<hr>
+<hr>
+<form #basicForm="ngForm" *ngIf="display" (submit)="getData2(basicForm.value)">
+    <input type="text" ngModel name="name" id="" placeholder="Enter User Name">
+    <br>
+    <input type="text" ngModel name="email" id="" placeholder="Enter User Email">
+    <br>
+    <input type="text" ngModel name="password" id="" placeholder="Enter User Password">
+    <br>
+    <button>Register</button>
+</form>
+
+<br>
+<hr>
+<ul>
+    <li>{{userValue.name}}</li>
+    <li>{{userValue.email}}</li>
+    <li>{{userValue.password}}</li>
+</ul>
+
+<button (click)="togg()">Toggle</button>
+
+
+
+
+
 
 <router-outlet></router-outlet>

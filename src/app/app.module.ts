@@ -6,8 +6,12 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { StudentListComponent } from './student-list/student-list.component';
+import { FormsModule } from '@angular/forms';
 
-import {UserAuthModule} from './user-auth/user-auth.module';   
+import {UserAuthModule} from './user-auth/user-auth.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';   
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import {UserAuthModule} from './user-auth/user-auth.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserAuthModule
+    UserAuthModule,
+    FormsModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
