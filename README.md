@@ -1,12 +1,12 @@
 # Commands
-npm install -g @angular/cli
-npm start
+npm install -g @angular/cli_
+npm start_
 npm install -g@angular/cli@10.0.0
 
 netstat -a -o -n
 
 ---------Generate component----------------------------
-ng generate component component_name
+ng generate component component_name_
 ng g c component_name
 ng g c user-data --inline-style
 ng generate component student-list --inline-template
