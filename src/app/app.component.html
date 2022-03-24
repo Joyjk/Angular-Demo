@@ -1,5 +1,19 @@
 <input type="text" [(ngModel)]="name">
-<h5>{{name}}</h5>
+<h5>{{name| uppercase}} </h5>
 
 <input type="text" placeholder="enter name" #doc>
 <button (click)="getDat(doc.value)">Click</button>
+
+<h5>{{name| lowercase}} </h5>
+
+<h4>{{today | date:'fullDate'}}</h4>
+<h3>{{makeCaps(name)}}</h3>
+
+<h5>{{name| slice:3 :5 }} </h5>
+
+<h3>{{userDetails| json|uppercase}}</h3>
+
+<h3>{{0005000.4564| number:'2.2-3'}}</h3>
+<h3>{{5.45| number:'3.3-5'}}</h3>
+
+<h2>{{20|currency:'USD'}}</h2>
