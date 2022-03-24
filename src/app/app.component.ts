@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validator, Validators} from '@angular/forms'
+import  {ApisDataService} from '../app/services/apis-data.service'
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,28 @@ import {FormControl, FormGroup, Validator, Validators} from '@angular/forms'
 export class AppComponent {
   title = 'Test Angular';
   name:any;
+  info:any;
+  constructor(private allData: ApisDataService )
+  {
+      allData.products().subscribe((da)=> {
+
+        console.warn("products",da)
+
+        this.info = da
+      });
+      
+
+  }
+
+  getUserFormData(data:any)
+  {
+    //console.warn(data)
+    this.allData.saveProducts(data).subscribe((res)=>{
+      console.log(res)
+    })
+  }
+
+
 
   getDat(item:any)
   {

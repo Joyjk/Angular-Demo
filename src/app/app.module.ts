@@ -16,6 +16,8 @@ import { NoPageComponent } from './no-page/no-page.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AboutUsComponent } from './about-us/about-us.component'
 
+import { HttpClientModule} from '@angular/common/http';
+
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { AboutUsComponent } from './about-us/about-us.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { UserdataService} from '../userdata.service'
+
 
 @Component({
   selector: 'app-page4',
@@ -7,8 +9,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./page4.component.css']
 })
 export class Page4Component implements OnInit {
-
-  constructor(private route: ActivatedRoute) { }
+  users:any
+  constructor(private route: ActivatedRoute, private userdata: UserdataService) 
+  {
+      this.users = userdata.users();
+   }
 
     userId:any =0
 

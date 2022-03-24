@@ -43,6 +43,14 @@
 
 
 <h4 appRedEL>HHHHHHHHHHH</h4>
+
+<ul> 
+    <li *ngFor="let item of info">
+        {{item.id}} &nbsp; &nbsp; || &nbsp; &nbsp; {{item.barCode}}
+    </li>
+</ul>
+
+
 <hr>
 <hr>
 <a  routerLink="page1"> Page 1</a>
@@ -53,4 +61,12 @@
 <br>
 <a routerLink="page4/23">Page 4</a>
 <router-outlet></router-outlet>
+
+<hr>
+<hr>
+<form method="post" enctype="multipart/form-data" #fileForm="ngForm"  (ngSubmit)="getUserFormData(fileForm.value)">
+    <input type="file"  ngModel  name="file">
+    <br>
+    <button>Send File</button>
+</form>
 
