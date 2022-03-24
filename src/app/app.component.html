@@ -107,7 +107,7 @@
 <router-outlet></router-outlet> -->
 
 
-<app-child [item]="count"></app-child>
+<app-child [item]="count" (childToParent)="fromChildData($event)"></app-child>
 <button (click)="updateBtn()">Click update</button>
 <br>
 <br>
@@ -117,4 +117,11 @@
         <app-large-com [item2]="user"></app-large-com>
     </li>
 </ul>
+
+
+<br><br>
+<div class="container">
+    <h4>{{color}}</h4>
+    <br>
+</div>
 

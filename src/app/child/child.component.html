@@ -1,4 +1,6 @@
 <div class="container">
     <p>child works!</p>
     <h5>{{item}}</h5>
+    <input type="text" #dox name="" id="">
+    <button (click)="childToParent.emit(dox.value)">Update Data</button>
 </div>

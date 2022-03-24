@@ -76,4 +76,10 @@ export class AppComponent {
     this.count = Math.floor(Math.random()*1000)
   }
 
+  fromChildData(item:any)
+  {
+    console.warn(item)
+    this.color = item
+  }
+
 }
