@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -45,6 +46,14 @@ export class AppComponent {
       console.warn(data)
   }
 
+  loginDemoReactive = new FormGroup({
+    name: new FormControl(''),
+    password: new FormControl('')
+  })
+
+  loginUserDemo(){
+    console.warn(this.loginDemoReactive.value)
+  }
 
 
 }

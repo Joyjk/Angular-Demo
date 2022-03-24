@@ -1,4 +1,4 @@
-<input type="text" [(ngModel)]="name">
+<!-- <input type="text" [(ngModel)]="name">
 <h5>{{name| uppercase}} </h5>
 
 <input type="text" placeholder="enter name" #doc>
@@ -7,9 +7,9 @@
 <h5>{{name| lowercase}} </h5>
 
 <h4>{{today | date:'fullDate'}}</h4>
-<!-- <h3>{{makeCaps(name)}}</h3> -->
+ <h3>{{makeCaps(name)}}</h3> -->
 
-<h5>{{name| slice:3 :5 }} </h5>
+<!-- <h5>{{name| slice:3 :5 }} </h5>
 
 <h3>{{userDetails| json|uppercase}}</h3>
 
@@ -29,4 +29,12 @@
     <button>Login</button>
 </form>
 
-<button (click)="userLogin(loginForm.value)">Outer button</button>
+<button (click)="userLogin(loginForm.value)">Outer button</button>  -->
+
+<form [formGroup]="loginDemoReactive" #loginForm="ngForm" (ngSubmit)="loginUserDemo()" >
+    <input type="text" name="name" id="" formControlName="name"  placeholder="Enter Name">
+    <br><br>
+    <input type="text" name="pass" id="" formControlName="password"  placeholder="Enter Password">
+    <br>
+    <button>Login</button>
+</form>
