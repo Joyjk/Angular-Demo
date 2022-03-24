@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular-Demo-2';
+  title = 'Test Angular';
+  name:any;
+
+  getDat(item:any)
+  {
+    console.log(item)
+  }
+
 }
