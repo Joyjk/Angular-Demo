@@ -1,6 +1,6 @@
 
 
-<app-user-list></app-user-list>
+<!-- <app-user-list></app-user-list>
 <app-user-data></app-user-data>
 <app-student-list></app-student-list>
 <app-login></app-login>
@@ -12,9 +12,9 @@
 <input type="text" #box (keyup)="getData(box.value)" name="" id="" placeholder="Keyup">
 <br>
 <input type="text" #box1 (keydown)="getData(box1.value)" name="" id="" placeholder="keydown">
-<br>
+<br> -->
 <!-- blur - -> when focus out  -->
-<input type="text" #box2 (blur)="getData(box2.value)" name="" id="" [disabled]="disable" placeholder="blur">
+<!-- <input type="text" #box2 (blur)="getData(box2.value)" name="" id="" [disabled]="disable" placeholder="blur">
 <br>
 
 <input type="text" #box3 (input)="getData(box3.value)" name="" id="" disabled="{{disable}}" placeholder="input">
@@ -104,4 +104,17 @@
 
 
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+
+<app-child [item]="count"></app-child>
+<button (click)="updateBtn()">Click update</button>
+<br>
+<br>
+
+<ul *ngFor="let user of userDetails">
+    <li>
+        <app-large-com [item2]="user"></app-large-com>
+    </li>
+</ul>
+

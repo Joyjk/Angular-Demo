@@ -12,13 +12,17 @@ import {UserAuthModule} from './user-auth/user-auth.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';   
 import { MatSliderModule } from '@angular/material/slider';
+import { ChildComponent } from './child/child.component';
+import { LargeComComponent } from './large-com/large-com.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserDataComponent,
-    StudentListComponent
+    StudentListComponent,
+    ChildComponent,
+    LargeComComponent
   ],
   imports: [
     BrowserModule,

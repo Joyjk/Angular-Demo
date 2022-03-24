@@ -71,6 +71,9 @@ export class AppComponent {
     this.display=!this.display
   }
  
-
+  updateBtn()
+  {
+    this.count = Math.floor(Math.random()*1000)
+  }
 
 }
