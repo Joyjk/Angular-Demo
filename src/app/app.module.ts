@@ -4,11 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { UsdBdtPipe } from './pipes/usd-bdt.pipe';
+
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsdBdtPipe
   ],
   imports: [
     BrowserModule,

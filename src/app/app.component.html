@@ -7,7 +7,7 @@
 <h5>{{name| lowercase}} </h5>
 
 <h4>{{today | date:'fullDate'}}</h4>
-<h3>{{makeCaps(name)}}</h3>
+<!-- <h3>{{makeCaps(name)}}</h3> -->
 
 <h5>{{name| slice:3 :5 }} </h5>
 
@@ -17,3 +17,16 @@
 <h3>{{5.45| number:'3.3-5'}}</h3>
 
 <h2>{{20|currency:'USD'}}</h2>
+
+
+<h1>{{100|usdBdt: 89 }}</h1>
+
+<form action="" #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+    <input type="text" name="name" id="" ngModel placeholder="Enter Name">
+    <br><br>
+    <input type="text" name="pass" id="" ngModel placeholder="Enter Password">
+    <br>
+    <button>Login</button>
+</form>
+
+<button (click)="userLogin(loginForm.value)">Outer button</button>

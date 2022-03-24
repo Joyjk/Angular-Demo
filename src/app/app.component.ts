@@ -40,4 +40,11 @@ export class AppComponent {
     {name: 'jkl', address:'khu', phone:'015', accounts:['facebook','gmail','yahoo']},
   ]
 
+  userLogin(data:any)
+  {
+      console.warn(data)
+  }
+
+
+
 }
