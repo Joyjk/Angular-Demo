@@ -28,7 +28,7 @@ const routes: Routes = [
       {
         path:'aboutus',
         component:AboutUsComponent
-      },
+      }, 
 
     ]
   },
