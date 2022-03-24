@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms'
+import {FormControl, FormGroup, Validator, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -47,12 +47,16 @@ export class AppComponent {
   }
 
   loginDemoReactive = new FormGroup({
-    name: new FormControl(''),
+    name: new FormControl('',[Validators.required, Validators.pattern('[a-zA-Z]+$')]),
     password: new FormControl('')
   })
 
   loginUserDemo(){
     console.warn(this.loginDemoReactive.value)
+  }
+
+  get nameValidator(){
+    return this.loginDemoReactive.get('name')
   }
 
 

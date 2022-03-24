@@ -31,10 +31,15 @@
 
 <button (click)="userLogin(loginForm.value)">Outer button</button>  -->
 
-<form [formGroup]="loginDemoReactive" #loginForm="ngForm" (ngSubmit)="loginUserDemo()" >
+<form [formGroup]="loginDemoReactive"  (ngSubmit)="loginUserDemo()" >
     <input type="text" name="name" id="" formControlName="name"  placeholder="Enter Name">
-    <br><br>
+    <br>
+    <span style="color: red;" *ngIf="nameValidator && nameValidator.invalid && nameValidator.touched">This field is not valid</span>
+    <br>
     <input type="text" name="pass" id="" formControlName="password"  placeholder="Enter Password">
     <br>
-    <button>Login</button>
-</form>
+    <button [disabled]="loginDemoReactive.invalid">Login</button>
+</form >
+
+
+<h4 appRedEL>HHHHHHHHHHH</h4>
