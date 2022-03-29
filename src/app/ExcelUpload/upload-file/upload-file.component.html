@@ -1,0 +1,6 @@
+<form #uploadForm = "ngForm" (ngSubmit)="getformSubmitData()">
+    <input type="file" ngModel name="file" (change)="onSelectedFile($event)" >
+    <br>
+    <br>
+    <button>Import</button>
+</form>

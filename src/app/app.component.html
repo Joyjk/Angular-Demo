@@ -5,8 +5,16 @@
   </li>
 </ul>
 
-<ul>
+<!-- <ul>
   <li *ngFor="let item2 of productApiData">
     {{item2.chalan}}
   </li>
-</ul>
+</ul> -->
+<hr>
+<app-upload-file></app-upload-file>
+<hr>
+<form #usersForm="ngForm" (ngSubmit)="getformSubmitData(usersForm.value)">
+  <input type="text" ngModel name="name" placeholder="Enter Name">
+  <br><br>
+  <button >Submit</button>
+</form>
