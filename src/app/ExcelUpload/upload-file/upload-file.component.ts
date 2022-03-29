@@ -30,6 +30,9 @@ export class UploadFileComponent implements OnInit {
       this.userdata.uploadFile(formData).subscribe((res)=>{
         console.warn(res)
       })
+
+
+      
   }
 
 }
